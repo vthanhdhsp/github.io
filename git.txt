@@ -1,0 +1,58 @@
+git config --global user.email "vthanhdhsp@example.com"
+git config --global user.name "vthanhdhsp"
+viết các lệnh từ trên xuống để tôi ghi lại lần sau làm
+
+
+Mình sẽ viết cho bạn trọn bộ lệnh chuẩn từ đầu đến cuối, dùng khi bạn muốn khởi tạo repo và đẩy code lên GitHub lần đầu tiên. Bạn chỉ cần copy và chỉnh URL cho đúng repo của mình!
+
+🌟 Trọn bộ lệnh Git đẩy code lần đầu
+⚙ 1️⃣ Tạo file, khởi tạo repo
+bash
+Copy
+Edit
+echo "# github.io" >> README.md         # Tạo file README.md với tiêu đề
+git init                                # Khởi tạo Git repo trong thư mục hiện tại
+git add README.md                       # Thêm file README.md vào staging area
+git commit -m "first commit"            # Commit lần đầu
+git branch -M main                      # Đổi branch mặc định thành main
+⚙ 2️⃣ Thêm remote và đẩy code
+🔑 Hãy chắc chắn bạn đã tạo repo trên GitHub trước (VD: github.io hoặc vthanhdhsp.github.io)
+
+bash
+Copy
+Edit
+git remote add origin https://github.com/vthanhdhsp/github.io.git    # Thêm remote (URL repo GitHub của bạn)
+git push -u origin main                                              # Đẩy code lần đầu lên nhánh main
+🌟 Trường hợp bạn đã add remote trước đó (hoặc add sai URL)
+bash
+Copy
+Edit
+git remote set-url origin https://github.com/vthanhdhsp/github.io.git   # Sửa URL remote về đúng repo
+git push -u origin main                                                 # Đẩy code
+🌟 Lệnh kiểm tra thông tin
+bash
+Copy
+Edit
+git remote -v                    # Xem URL remote hiện tại
+git status                        # Kiểm tra trạng thái file
+git log                           # Xem lịch sử commit
+🚀 QUY TRÌNH TÓM TẮT
+less
+Copy
+Edit
+1️⃣ Tạo repo trên GitHub (ví dụ: github.io)
+2️⃣ Chạy các lệnh từ trên xuống
+3️⃣ Đẩy code lần đầu (git push -u origin main)
+👉 Mẹo: Bạn có thể lưu trọn bộ này vào file git_steps.txt để lần sau copy lại dễ hơn:
+
+bash
+Copy
+Edit
+echo "git init ..." > git_steps.txt
+Nếu bạn cần mình soạn sẵn file script (.sh hoặc .bat) để chạy tự động, mình hỗ trợ luôn nhé! Bạn cần không? 🚀
+
+*******Tao cap nhat
+
+git remote -v   # Kiểm tra địa chỉ remote
+git commit -m "Push updated payload demo files"
+git push origin main  # Hoặc master tùy nhánh của repo
